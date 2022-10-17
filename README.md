@@ -5,6 +5,7 @@
 const { isMainThread, workerData,
         create_worker, on_close } = require('./index')
 
+// your job 1
 function threads_1 (name) {
     console.log('start thread:', name)
     let _is_close = false
@@ -17,6 +18,7 @@ function threads_1 (name) {
         console.log('threads_1 receive close')
     })
 }
+// your job 2
 async function threads_2 (name) {
     console.log('start thread:', name)
     let _is_close = false
